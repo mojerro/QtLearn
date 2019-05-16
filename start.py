@@ -1,8 +1,12 @@
 """
-	author: JoeyGaojingxing
-	time: 
+    author: JoeyGaojingxing
+    time:
 """
-import ctypes
+from ctypes import CDLL, cdll, windll, oledll
+
+oledll.LoadLibrary('test.dll')
+lib = CDLL('test.dll')
 
 if __name__ == '__main__':
-    print('afd')
+    res = lib.Sum(2, 3)
+    print(res)
