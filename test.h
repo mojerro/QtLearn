@@ -69,7 +69,7 @@ extern "C" {
 #endif
 
 
-extern int Sum(int p0, int p1);
+extern GoSlice* Sum(GoInt p0, GoInt p1);
 
 #ifdef __cplusplus
 }

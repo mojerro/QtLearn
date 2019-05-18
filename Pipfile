@@ -11,7 +11,7 @@ qtpy = "*"
 pyopengl = "*"
 pyqt5 = "*"
 numpy = "*"
-pyopengl-accelerate = "*"
+#pyopengl-accelerate = "*"
 ctypes = "*"
 
 [requires]
