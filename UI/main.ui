@@ -6,22 +6,28 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>561</width>
+    <height>249</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>41607497 高景行 数据结构 主页</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="NinePatchButton">
     <property name="geometry">
      <rect>
-      <x>190</x>
+      <x>300</x>
       <y>40</y>
-      <width>141</width>
+      <width>161</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线 Light</family>
+      <pointsize>16</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>NinePatch</string>
@@ -30,11 +36,17 @@
    <widget class="QPushButton" name="JosephusCircleButton">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>100</x>
       <y>40</y>
-      <width>141</width>
+      <width>161</width>
       <height>41</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>等线 Light</family>
+      <pointsize>16</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>JosephusCircle</string>
@@ -46,7 +58,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>561</width>
      <height>23</height>
     </rect>
    </property>

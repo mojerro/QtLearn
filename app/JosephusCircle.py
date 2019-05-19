@@ -1,9 +1,9 @@
 from ctypes import CDLL, c_char_p
 from utils.utils import convert_byte
 from UI.ui_josephus_circle import Ui_JosephusCircleFrame
-from PySide2.QtWidgets import QFrame, QApplication
+from PySide2.QtWidgets import QFrame
 from PySide2.QtCore import SIGNAL, Slot
-import os, sys
+import os
 
 """
 types:
@@ -16,8 +16,8 @@ b'\x05\x01\x07\x04\x03\x06\t\x02\x08\x01\x10\xac\xef\x01'
 b'\x05\x01\x07\x04\x03\x06\t\x02\x08\x01\x10\xac\xef\x01'
 """
 
-# path = os.path.join(os.getcwd(), r'build\JosephusCircle.so')
-path = r'D:\Programming\QtLearn\build\JosephusCircle.so'
+path = os.path.join(os.getcwd(), r'build\JosephusCircle.so')
+# path = r'D:\Programming\QtLearn\build\JosephusCircle.so'
 josephus = CDLL(path)
 
 
@@ -64,24 +64,13 @@ class JosephusCircleWindow(QFrame, Ui_JosephusCircleFrame):
 
     @Slot()
     def run(self):
-        print(self.people, self.times, self.starter, self.comboBox.currentText())
         if self.comboBox.currentText() == "数组":
             res = josephus_circle_arr(self.people, self.times, self.starter)
         elif self.comboBox.currentText() == "链表":
             res = josephus_circle_linked_list(self.people, self.times, self.starter)
         else:
             raise NameError
-        print('res', res)
         self.labelResult.setText(str(res))
 
     def closeEvent(self, event=None):
-        if event is not None:
-            self.main.show()
-
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    window = JosephusCircleWindow()
-    window.show()
-    # sys.exit(app.exec_())
-    app.exec_()
+        self.main.show()

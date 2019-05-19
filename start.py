@@ -2,12 +2,12 @@
     author: JoeyGaojingxing
     time:
 """
-from app.JosephusCircle import josephus_circle_arr, josephus_circle_linked_list
 import sys
 from PySide2 import QtCore, QtGui
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget
 from UI.ui_main import Ui_MainWindow
-from app.JosephusCircle import JosephusCircleWindow
+from app import JosephusCircleWindow, NinePatchWindow
+
 
 try:
     # Python v2.
@@ -38,11 +38,18 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         QMainWindow.__init__(self)
         self.setupUi(self)
         self.JosephusCircleButton.clicked.connect(self.click_josephus_circle)
-        self.frame = JosephusCircleWindow(self)
+        self.josephus_circle = JosephusCircleWindow(self)
+        self.NinePatchButton.clicked.connect(self.click_nine_patch)
+        self.nine_patch = NinePatchWindow(self)
 
     @QtCore.Slot()
     def click_josephus_circle(self):
-        self.frame.show()
+        self.josephus_circle.show()
+        self.hide()
+
+    @QtCore.Slot()
+    def click_nine_patch(self):
+        self.nine_patch.show()
         self.hide()
 
 
