@@ -7,7 +7,10 @@ from PySide2 import QtCore, QtGui
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget
 from UI.ui_main import Ui_MainWindow
 from app import JosephusCircleWindow, NinePatchWindow
-
+"""
+TODO: beauty the GUI, such as backgrounds, layouts, window icon.
+TODO: add global error handling, raise warnings when raise a error
+"""
 
 try:
     # Python v2.
@@ -58,4 +61,4 @@ if __name__ == '__main__':
     window = MainWindow()
     window.show()
     # sys.exit(app.exec_())
-    app.exec_()
+    sys.exit(app.exec_())

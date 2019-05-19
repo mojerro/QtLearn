@@ -70,6 +70,10 @@
    </property>
   </action>
  </widget>
+ <tabstops>
+  <tabstop>JosephusCircleButton</tabstop>
+  <tabstop>NinePatchButton</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>

@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/josephus_circle.ui',
 # licensing of './UI/josephus_circle.ui' applies.
 #
-# Created: Sun May 19 21:41:54 2019
+# Created: Sun May 19 23:04:05 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -93,9 +93,18 @@ class Ui_JosephusCircleFrame(object):
         self.labelResult.setFont(font)
         self.labelResult.setObjectName("labelResult")
         self.horizontalLayout.addWidget(self.labelResult)
+        self.labelDataStructure.setBuddy(self.comboBox)
+        self.label_people.setBuddy(self.spinBox_people)
+        self.label_times.setBuddy(self.spinBox_times)
+        self.label_starter.setBuddy(self.spinBox_starter)
 
         self.retranslateUi(JosephusCircleFrame)
         QtCore.QMetaObject.connectSlotsByName(JosephusCircleFrame)
+        JosephusCircleFrame.setTabOrder(self.comboBox, self.spinBox_people)
+        JosephusCircleFrame.setTabOrder(self.spinBox_people, self.spinBox_times)
+        JosephusCircleFrame.setTabOrder(self.spinBox_times, self.spinBox_starter)
+        JosephusCircleFrame.setTabOrder(self.spinBox_starter, self.commitButton)
+        JosephusCircleFrame.setTabOrder(self.commitButton, self.labelResult)
 
     def retranslateUi(self, JosephusCircleFrame):
         JosephusCircleFrame.setWindowTitle(QtWidgets.QApplication.translate("JosephusCircleFrame", "约瑟夫环", None, -1))
@@ -106,4 +115,5 @@ class Ui_JosephusCircleFrame(object):
         self.label_times.setText(QtWidgets.QApplication.translate("JosephusCircleFrame", "报数周期", None, -1))
         self.label_starter.setText(QtWidgets.QApplication.translate("JosephusCircleFrame", "起始人", None, -1))
         self.commitButton.setText(QtWidgets.QApplication.translate("JosephusCircleFrame", "提交", None, -1))
+        self.commitButton.setShortcut(QtWidgets.QApplication.translate("JosephusCircleFrame", "Return", None, -1))
 

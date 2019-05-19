@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/main.ui',
 # licensing of './UI/main.ui' applies.
 #
-# Created: Sun May 19 21:41:53 2019
+# Created: Sun May 19 23:04:04 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -43,6 +43,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        MainWindow.setTabOrder(self.JosephusCircleButton, self.NinePatchButton)
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "41607497 高景行 数据结构 主页", None, -1))

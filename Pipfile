@@ -12,6 +12,7 @@ pyopengl = "*"
 pyqt5 = "*"
 numpy = "*"
 #pyopengl-accelerate = "*"
+pyinstaller = "*"
 
 [requires]
 python_version = "3.6"

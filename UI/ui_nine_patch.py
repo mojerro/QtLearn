@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/nine_patch.ui',
 # licensing of './UI/nine_patch.ui' applies.
 #
-# Created: Sun May 19 22:53:31 2019
+# Created: Sun May 19 23:04:06 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -41,11 +41,17 @@ class Ui_NinePatchFrame(object):
         self.horizontalLayout.addWidget(self.pushButtonCommit)
         self.verticalLayout.addLayout(self.horizontalLayout)
         self.tableWidgetResult = QtWidgets.QTableWidget(NinePatchFrame)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.tableWidgetResult.sizePolicy().hasHeightForWidth())
+        self.tableWidgetResult.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setFamily("微软雅黑 Light")
         font.setPointSize(16)
         self.tableWidgetResult.setFont(font)
         self.tableWidgetResult.setEditTriggers(QtWidgets.QAbstractItemView.EditKeyPressed)
+        self.tableWidgetResult.setIconSize(QtCore.QSize(5, 5))
         self.tableWidgetResult.setTextElideMode(QtCore.Qt.ElideNone)
         self.tableWidgetResult.setObjectName("tableWidgetResult")
         self.tableWidgetResult.setColumnCount(0)
@@ -59,13 +65,17 @@ class Ui_NinePatchFrame(object):
         self.tableWidgetResult.verticalHeader().setHighlightSections(False)
         self.tableWidgetResult.verticalHeader().setMinimumSectionSize(10)
         self.verticalLayout.addWidget(self.tableWidgetResult)
+        self.labelEdge.setBuddy(self.spinBoxEdge)
 
         self.retranslateUi(NinePatchFrame)
         QtCore.QMetaObject.connectSlotsByName(NinePatchFrame)
+        NinePatchFrame.setTabOrder(self.spinBoxEdge, self.pushButtonCommit)
+        NinePatchFrame.setTabOrder(self.pushButtonCommit, self.tableWidgetResult)
 
     def retranslateUi(self, NinePatchFrame):
         NinePatchFrame.setWindowTitle(QtWidgets.QApplication.translate("NinePatchFrame", "九宫图", None, -1))
         self.labelEdge.setText(QtWidgets.QApplication.translate("NinePatchFrame", "边长", None, -1))
         self.pushButtonCommit.setText(QtWidgets.QApplication.translate("NinePatchFrame", "提交", None, -1))
+        self.pushButtonCommit.setShortcut(QtWidgets.QApplication.translate("NinePatchFrame", "Return", None, -1))
         self.tableWidgetResult.setSortingEnabled(False)
 

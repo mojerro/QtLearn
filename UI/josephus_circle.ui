@@ -34,6 +34,9 @@
        <property name="text">
         <string>选择数据结构</string>
        </property>
+       <property name="buddy">
+        <cstring>comboBox</cstring>
+       </property>
       </widget>
      </item>
      <item row="0" column="1">
@@ -67,6 +70,9 @@
        <property name="text">
         <string>人数</string>
        </property>
+       <property name="buddy">
+        <cstring>spinBox_people</cstring>
+       </property>
       </widget>
      </item>
      <item row="1" column="1">
@@ -88,6 +94,9 @@
        </property>
        <property name="text">
         <string>报数周期</string>
+       </property>
+       <property name="buddy">
+        <cstring>spinBox_times</cstring>
        </property>
       </widget>
      </item>
@@ -111,6 +120,9 @@
        <property name="text">
         <string>起始人</string>
        </property>
+       <property name="buddy">
+        <cstring>spinBox_starter</cstring>
+       </property>
       </widget>
      </item>
      <item row="3" column="1">
@@ -133,6 +145,9 @@
        <property name="text">
         <string>提交</string>
        </property>
+       <property name="shortcut">
+        <string>Return</string>
+       </property>
       </widget>
      </item>
     </layout>
@@ -149,6 +164,14 @@
    </item>
   </layout>
  </widget>
+ <tabstops>
+  <tabstop>comboBox</tabstop>
+  <tabstop>spinBox_people</tabstop>
+  <tabstop>spinBox_times</tabstop>
+  <tabstop>spinBox_starter</tabstop>
+  <tabstop>commitButton</tabstop>
+  <tabstop>labelResult</tabstop>
+ </tabstops>
  <resources/>
  <connections/>
 </ui>
