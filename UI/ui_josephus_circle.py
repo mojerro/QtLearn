@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/josephus_circle.ui',
 # licensing of './UI/josephus_circle.ui' applies.
 #
-# Created: Sun May 19 23:04:05 2019
+# Created: Mon May 20 14:14:46 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -71,20 +71,22 @@ class Ui_JosephusCircleFrame(object):
         font.setPointSize(16)
         self.label_starter.setFont(font)
         self.label_starter.setObjectName("label_starter")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.LabelRole, self.label_starter)
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.LabelRole, self.label_starter)
         self.spinBox_starter = QtWidgets.QSpinBox(JosephusCircleFrame)
         font = QtGui.QFont()
         font.setPointSize(16)
         self.spinBox_starter.setFont(font)
         self.spinBox_starter.setObjectName("spinBox_starter")
-        self.formLayout.setWidget(3, QtWidgets.QFormLayout.FieldRole, self.spinBox_starter)
+        self.formLayout.setWidget(4, QtWidgets.QFormLayout.FieldRole, self.spinBox_starter)
         self.commitButton = QtWidgets.QPushButton(JosephusCircleFrame)
         font = QtGui.QFont()
         font.setFamily("微软雅黑 Light")
         font.setPointSize(16)
         self.commitButton.setFont(font)
         self.commitButton.setObjectName("commitButton")
-        self.formLayout.setWidget(4, QtWidgets.QFormLayout.SpanningRole, self.commitButton)
+        self.formLayout.setWidget(6, QtWidgets.QFormLayout.SpanningRole, self.commitButton)
+        spacerItem = QtWidgets.QSpacerItem(20, 40, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
+        self.formLayout.setItem(5, QtWidgets.QFormLayout.LabelRole, spacerItem)
         self.horizontalLayout.addLayout(self.formLayout)
         self.labelResult = QtWidgets.QTextBrowser(JosephusCircleFrame)
         font = QtGui.QFont()

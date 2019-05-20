@@ -39,7 +39,7 @@ class JosephusCircleWindow(QFrame, Ui_JosephusCircleFrame):
         QFrame.__init__(self)
         self.setupUi(self)
         self.main = main
-        self.people = 99
+        self.people = 9
         self.starter = 1
         self.times = 5
         self.spinBox_times.setValue(self.times)

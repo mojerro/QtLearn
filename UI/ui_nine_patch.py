@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/nine_patch.ui',
 # licensing of './UI/nine_patch.ui' applies.
 #
-# Created: Sun May 19 23:04:06 2019
+# Created: Mon May 20 14:14:47 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -60,10 +60,12 @@ class Ui_NinePatchFrame(object):
         self.tableWidgetResult.horizontalHeader().setDefaultSectionSize(10)
         self.tableWidgetResult.horizontalHeader().setHighlightSections(False)
         self.tableWidgetResult.horizontalHeader().setMinimumSectionSize(10)
+        self.tableWidgetResult.horizontalHeader().setStretchLastSection(True)
         self.tableWidgetResult.verticalHeader().setVisible(False)
         self.tableWidgetResult.verticalHeader().setDefaultSectionSize(10)
         self.tableWidgetResult.verticalHeader().setHighlightSections(False)
         self.tableWidgetResult.verticalHeader().setMinimumSectionSize(10)
+        self.tableWidgetResult.verticalHeader().setStretchLastSection(True)
         self.verticalLayout.addWidget(self.tableWidgetResult)
         self.labelEdge.setBuddy(self.spinBoxEdge)
 

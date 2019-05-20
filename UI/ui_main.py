@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/main.ui',
 # licensing of './UI/main.ui' applies.
 #
-# Created: Sun May 19 23:04:04 2019
+# Created: Mon May 20 14:14:45 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -14,6 +14,8 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(561, 249)
+        MainWindow.setAutoFillBackground(True)
+        MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.NinePatchButton = QtWidgets.QPushButton(self.centralwidget)

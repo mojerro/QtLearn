@@ -7,6 +7,7 @@ from PySide2 import QtCore, QtGui
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget
 from UI.ui_main import Ui_MainWindow
 from app import JosephusCircleWindow, NinePatchWindow
+
 """
 TODO: beauty the GUI, such as backgrounds, layouts, window icon.
 TODO: add global error handling, raise warnings when raise a error
@@ -47,11 +48,13 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
     @QtCore.Slot()
     def click_josephus_circle(self):
+        self.josephus_circle.setStyleSheet(open(r"UI\base.qss", "r", encoding='utf-8').read())
         self.josephus_circle.show()
         self.hide()
 
     @QtCore.Slot()
     def click_nine_patch(self):
+        self.nine_patch.setStyleSheet(open(r"UI\base.qss", "r", encoding='utf-8').read())
         self.nine_patch.show()
         self.hide()
 
@@ -59,6 +62,6 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = MainWindow()
+    window.setStyleSheet(open(r"UI\base.qss", "r", encoding='utf-8').read())
     window.show()
-    # sys.exit(app.exec_())
     sys.exit(app.exec_())
