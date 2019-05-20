@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/main.ui',
 # licensing of './UI/main.ui' applies.
 #
-# Created: Mon May 20 14:14:45 2019
+# Created: Mon May 20 14:31:04 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -14,6 +14,9 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(561, 249)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/root/favicon"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(True)
         MainWindow.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -53,3 +56,4 @@ class Ui_MainWindow(object):
         self.JosephusCircleButton.setText(QtWidgets.QApplication.translate("MainWindow", "JosephusCircle", None, -1))
         self.actionnew.setText(QtWidgets.QApplication.translate("MainWindow", "new", None, -1))
 
+import UI.static_rc

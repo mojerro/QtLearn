@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>约瑟夫环</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="static.qrc">
+    <normaloff>:/root/favicon</normaloff>:/root/favicon</iconset>
+  </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
     <widget class="Line" name="line">
@@ -185,6 +189,8 @@
   <tabstop>commitButton</tabstop>
   <tabstop>labelResult</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="static.qrc"/>
+ </resources>
  <connections/>
 </ui>

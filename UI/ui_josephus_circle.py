@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/josephus_circle.ui',
 # licensing of './UI/josephus_circle.ui' applies.
 #
-# Created: Mon May 20 14:14:46 2019
+# Created: Mon May 20 14:31:05 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -14,6 +14,9 @@ class Ui_JosephusCircleFrame(object):
     def setupUi(self, JosephusCircleFrame):
         JosephusCircleFrame.setObjectName("JosephusCircleFrame")
         JosephusCircleFrame.resize(596, 320)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/root/favicon"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        JosephusCircleFrame.setWindowIcon(icon)
         self.horizontalLayout = QtWidgets.QHBoxLayout(JosephusCircleFrame)
         self.horizontalLayout.setObjectName("horizontalLayout")
         self.line = QtWidgets.QFrame(JosephusCircleFrame)
@@ -119,3 +122,4 @@ class Ui_JosephusCircleFrame(object):
         self.commitButton.setText(QtWidgets.QApplication.translate("JosephusCircleFrame", "提交", None, -1))
         self.commitButton.setShortcut(QtWidgets.QApplication.translate("JosephusCircleFrame", "Return", None, -1))
 
+import UI.static_rc

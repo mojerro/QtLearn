@@ -13,6 +13,10 @@
   <property name="windowTitle">
    <string>41607497 高景行 数据结构 主页</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="static.qrc">
+    <normaloff>:/root/favicon</normaloff>:/root/favicon</iconset>
+  </property>
   <property name="autoFillBackground">
    <bool>true</bool>
   </property>
@@ -80,6 +84,8 @@
   <tabstop>JosephusCircleButton</tabstop>
   <tabstop>NinePatchButton</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="static.qrc"/>
+ </resources>
  <connections/>
 </ui>

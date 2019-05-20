@@ -9,7 +9,7 @@ from UI.ui_main import Ui_MainWindow
 from app import JosephusCircleWindow, NinePatchWindow
 
 """
-TODO: beauty the GUI, such as backgrounds, layouts, window icon.
+beauty the GUI, such as backgrounds, layouts, window icon.
 TODO: add global error handling, raise warnings when raise a error
 """
 

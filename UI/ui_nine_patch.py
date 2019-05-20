@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/nine_patch.ui',
 # licensing of './UI/nine_patch.ui' applies.
 #
-# Created: Mon May 20 14:14:47 2019
+# Created: Mon May 20 14:46:33 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -14,6 +14,9 @@ class Ui_NinePatchFrame(object):
     def setupUi(self, NinePatchFrame):
         NinePatchFrame.setObjectName("NinePatchFrame")
         NinePatchFrame.resize(252, 290)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/root/favicon"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        NinePatchFrame.setWindowIcon(icon)
         self.verticalLayout = QtWidgets.QVBoxLayout(NinePatchFrame)
         self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout = QtWidgets.QHBoxLayout()
@@ -51,7 +54,7 @@ class Ui_NinePatchFrame(object):
         font.setPointSize(16)
         self.tableWidgetResult.setFont(font)
         self.tableWidgetResult.setEditTriggers(QtWidgets.QAbstractItemView.EditKeyPressed)
-        self.tableWidgetResult.setIconSize(QtCore.QSize(5, 5))
+        self.tableWidgetResult.setIconSize(QtCore.QSize(25, 25))
         self.tableWidgetResult.setTextElideMode(QtCore.Qt.ElideNone)
         self.tableWidgetResult.setObjectName("tableWidgetResult")
         self.tableWidgetResult.setColumnCount(0)
@@ -60,12 +63,12 @@ class Ui_NinePatchFrame(object):
         self.tableWidgetResult.horizontalHeader().setDefaultSectionSize(10)
         self.tableWidgetResult.horizontalHeader().setHighlightSections(False)
         self.tableWidgetResult.horizontalHeader().setMinimumSectionSize(10)
-        self.tableWidgetResult.horizontalHeader().setStretchLastSection(True)
+        self.tableWidgetResult.horizontalHeader().setStretchLastSection(False)
         self.tableWidgetResult.verticalHeader().setVisible(False)
         self.tableWidgetResult.verticalHeader().setDefaultSectionSize(10)
         self.tableWidgetResult.verticalHeader().setHighlightSections(False)
         self.tableWidgetResult.verticalHeader().setMinimumSectionSize(10)
-        self.tableWidgetResult.verticalHeader().setStretchLastSection(True)
+        self.tableWidgetResult.verticalHeader().setStretchLastSection(False)
         self.verticalLayout.addWidget(self.tableWidgetResult)
         self.labelEdge.setBuddy(self.spinBoxEdge)
 
@@ -81,3 +84,4 @@ class Ui_NinePatchFrame(object):
         self.pushButtonCommit.setShortcut(QtWidgets.QApplication.translate("NinePatchFrame", "Return", None, -1))
         self.tableWidgetResult.setSortingEnabled(False)
 
+import UI.static_rc
