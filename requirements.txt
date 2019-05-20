@@ -1,0 +1,14 @@
+altgraph==0.16.1
+future==0.17.1
+macholib==1.11
+numpy==1.16.3
+pefile==2019.4.18
+PyInstaller==3.4
+PyOpenGL==3.1.0
+PyOpenGL-accelerate==3.1.0
+PyQt5==5.12.2
+PyQt5-sip==4.19.17
+PySide2==5.12.3
+pywin32-ctypes==0.2.0
+QtPy==1.7.1
+shiboken2==5.12.3
