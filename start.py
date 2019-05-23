@@ -2,28 +2,66 @@
     author: JoeyGaojingxing
     time:
 """
+import sys
+from PySide2 import QtCore, QtGui
+from PySide2.QtWidgets import QMainWindow, QApplication, QWidget
+from UI.ui_main import Ui_MainWindow
+from app import JosephusCircleWindow, NinePatchWindow
 
-from ctypes import *
 """
-types:
-9 5 1
-[1 2 3 4 5 6 7 8 9]
-end1 [5 1 7 4 3 6 9 2 8]
-end2 [5 1 7 4 3 6 9 2 8]
-result: 
-b'\x05\x01\x07\x04\x03\x06\t\x02\x08\x01\x10\xac\xef\x01'
-b'\x05\x01\x07\x04\x03\x06\t\x02\x08\x01\x10\xac\xef\x01'
+beauty the GUI, such as backgrounds, layouts, window icon.
+TODO: add global error handling, raise warnings when raise a error
 """
 
-josephus = CDLL(r'D:\Programming\dataStructureByGo\test.so')
+try:
+    # Python v2.
+    unicode
+
+
+    def encode_utf8(ba):
+        return unicode(ba, encoding='utf8')
+
+
+    def decode_utf8(qs):
+        return QtCore.QByteArray(str(qs))
+
+except NameError:
+    # Python v3.
+
+    def encode_utf8(ba):
+        return str(ba.data(), encoding='utf8')
+
+
+    def decode_utf8(qs):
+        return QtCore.QByteArray(bytes(qs, encoding='utf8'))
+
+
+class MainWindow(QMainWindow, Ui_MainWindow):
+
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.setupUi(self)
+        self.JosephusCircleButton.clicked.connect(self.click_josephus_circle)
+        self.josephus_circle = JosephusCircleWindow(self)
+        self.NinePatchButton.clicked.connect(self.click_nine_patch)
+        self.nine_patch = NinePatchWindow(self)
+
+    @QtCore.Slot()
+    def click_josephus_circle(self):
+        self.josephus_circle.setStyleSheet(open(r"UI\base.qss", "r", encoding='utf-8').read())
+        self.josephus_circle.show()
+        self.hide()
+
+    @QtCore.Slot()
+    def click_nine_patch(self):
+        self.nine_patch.setStyleSheet(open(r"UI\base.qss", "r", encoding='utf-8').read())
+        self.nine_patch.show()
+        self.hide()
+
 
 if __name__ == '__main__':
-    res = josephus.JosephusCircleArr
-    link = josephus.JosephusCircleLinkedList
-    res.restype = c_char_p
-    link.restype = c_char_p
-    res = res(9, 5, 1)
-    # chr(code)
-    # ord(c)
-    link = link(9, 5, 1)
-    print('result: ', res, link, sep='\n')
+    app = QApplication(sys.argv)
+    window = MainWindow()
+    window.setStyleSheet(open(r"UI\base.qss", "r", encoding='utf-8').read())
+    window.show()
+    sys.exit(app.exec_())
