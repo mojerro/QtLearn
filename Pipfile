@@ -1,6 +1,6 @@
 [[source]]
 name = "pypi"
-url = "https://mirrors.aliyun.com/pypi/simple"
+url = "https://mirrors.huaweicloud.com/repository/pypi/simple"
 verify_ssl = true
 
 [dev-packages]
@@ -11,8 +11,7 @@ qtpy = "*"
 pyopengl = "*"
 pyqt5 = "*"
 numpy = "*"
-pyopengl-accelerate = "*"
-ctypes = "*"
+#pyopengl-accelerate = "*"
 
 [requires]
 python_version = "3.6"

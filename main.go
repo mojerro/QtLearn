@@ -1,10 +1,12 @@
 package main
 
-import "C"
+import ("C"
+"fmt")
 
 //export Sum
-func Sum(a, b C.int) C.int {
-    return a + b
+func Sum(a, b int) *[]int {
+    fmt.Println(a, b)
+    return &[]int{a, b}
 }
 
 func main() {}
