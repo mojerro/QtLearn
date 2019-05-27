@@ -1,8 +1,11 @@
 import os
-from ctypes import *
+from ctypes import CDLL, c_char_p
 from utils.utils import convert_byte
+from UI. import Ui_NinePatchFrame
+from PySide2.QtWidgets import QFrame, QTableWidgetItem
+from PySide2.QtCore import SIGNAL, Slot
 
-path = os.path.join(os.getcwd(), r'..\build\AStar.so')
+path = os.path.join(os.getcwd(), r'build\AStar.so')
 # path = r'D:\Programming\QtLearn\build\NinePatch.so'
 AStar = CDLL(path)
 

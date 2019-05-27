@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/nine_patch.ui',
 # licensing of './UI/nine_patch.ui' applies.
 #
-# Created: Mon May 20 14:46:33 2019
+# Created: Mon May 27 11:56:54 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -84,4 +84,4 @@ class Ui_NinePatchFrame(object):
         self.pushButtonCommit.setShortcut(QtWidgets.QApplication.translate("NinePatchFrame", "Return", None, -1))
         self.tableWidgetResult.setSortingEnabled(False)
 
-import UI.static_rc
+import static_rc

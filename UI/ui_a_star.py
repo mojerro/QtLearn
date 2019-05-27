@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/a_star.ui',
 # licensing of './UI/a_star.ui' applies.
 #
-# Created: Mon May 27 11:38:24 2019
+# Created: Mon May 27 12:02:10 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!

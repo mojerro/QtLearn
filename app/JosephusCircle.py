@@ -16,7 +16,7 @@ b'\x05\x01\x07\x04\x03\x06\t\x02\x08\x01\x10\xac\xef\x01'
 b'\x05\x01\x07\x04\x03\x06\t\x02\x08\x01\x10\xac\xef\x01'
 """
 
-path = os.path.join(os.getcwd(), r'..\build\JosephusCircle.so')
+path = os.path.join(os.getcwd(), r'build\JosephusCircle.so')
 # path = r'D:\Programming\QtLearn\build\JosephusCircle.so'
 josephus = CDLL(path)
 

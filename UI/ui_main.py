@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/main.ui',
 # licensing of './UI/main.ui' applies.
 #
-# Created: Mon May 20 14:31:04 2019
+# Created: Mon May 27 11:56:53 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -35,6 +35,13 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.JosephusCircleButton.setFont(font)
         self.JosephusCircleButton.setObjectName("JosephusCircleButton")
+        self.AStarButton = QtWidgets.QPushButton(self.centralwidget)
+        self.AStarButton.setGeometry(QtCore.QRect(100, 110, 231, 41))
+        font = QtGui.QFont()
+        font.setFamily("等线 Light")
+        font.setPointSize(16)
+        self.AStarButton.setFont(font)
+        self.AStarButton.setObjectName("AStarButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 561, 23))
@@ -52,8 +59,9 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QtWidgets.QApplication.translate("MainWindow", "41607497 高景行 数据结构 主页", None, -1))
-        self.NinePatchButton.setText(QtWidgets.QApplication.translate("MainWindow", "NinePatch", None, -1))
-        self.JosephusCircleButton.setText(QtWidgets.QApplication.translate("MainWindow", "JosephusCircle", None, -1))
+        self.NinePatchButton.setText(QtWidgets.QApplication.translate("MainWindow", "Nine Patch", None, -1))
+        self.JosephusCircleButton.setText(QtWidgets.QApplication.translate("MainWindow", "Josephus Circle", None, -1))
+        self.AStarButton.setText(QtWidgets.QApplication.translate("MainWindow", "A Star Path Finding", None, -1))
         self.actionnew.setText(QtWidgets.QApplication.translate("MainWindow", "new", None, -1))
 
-import UI.static_rc
+import static_rc
