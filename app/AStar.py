@@ -11,12 +11,11 @@ def a_star(size: bytes, init: bytes, goal: bytes, obstacles: bytes) -> bytes:
     res = AStar.AStarC
     res.restype = c_char_p
     res1 = res(size, init, goal, obstacles, len(obstacles))
-    print('reaafasdf', res1, 'afjlkih')
     return res1
 
 
 if __name__ == '__main__':
-    print('res: res', a_star(b'\x05\x05', b'\x00\x00', b'\x04\x04', b'\x01\x02\x03\x04'))
+    print('res: res', convert_byte(a_star(b'\x05\x05', b'\x00\x00', b'\x04\x04', b'\x01\x02\x03\x04')))
 
 # class NinePatchWindow(QFrame, Ui_NinePatchFrame):
 #
