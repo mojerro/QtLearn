@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="root">
+    <file alias="favicon">tulips-tree.ico</file>
+  </qresource>
+</RCC>
