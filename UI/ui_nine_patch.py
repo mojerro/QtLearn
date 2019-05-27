@@ -83,5 +83,3 @@ class Ui_NinePatchFrame(object):
         self.pushButtonCommit.setText(QtWidgets.QApplication.translate("NinePatchFrame", "提交", None, -1))
         self.pushButtonCommit.setShortcut(QtWidgets.QApplication.translate("NinePatchFrame", "Return", None, -1))
         self.tableWidgetResult.setSortingEnabled(False)
-
-import static_rc

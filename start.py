@@ -6,7 +6,7 @@ import sys
 from PySide2 import QtCore, QtGui
 from PySide2.QtWidgets import QMainWindow, QApplication, QWidget
 from UI.ui_main import Ui_MainWindow
-from app import JosephusCircleWindow, NinePatchWindow
+from app import JosephusCircleWindow, NinePatchWindow, AStarWindow
 
 """
 beauty the GUI, such as backgrounds, layouts, window icon.
@@ -45,6 +45,14 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         self.josephus_circle = JosephusCircleWindow(self)
         self.NinePatchButton.clicked.connect(self.click_nine_patch)
         self.nine_patch = NinePatchWindow(self)
+        self.AStarButton.clicked.connect(self.click_a_star)
+        self.a_star = AStarWindow(self)
+
+    @QtCore.Slot()
+    def click_a_star(self):
+        self.a_star.setStyleSheet(open(r"UI\base.qss", "r", encoding='utf-8').read())
+        self.a_star.show()
+        self.hide()
 
     @QtCore.Slot()
     def click_josephus_circle(self):

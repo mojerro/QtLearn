@@ -121,5 +121,3 @@ class Ui_JosephusCircleFrame(object):
         self.label_starter.setText(QtWidgets.QApplication.translate("JosephusCircleFrame", "起始人", None, -1))
         self.commitButton.setText(QtWidgets.QApplication.translate("JosephusCircleFrame", "提交", None, -1))
         self.commitButton.setShortcut(QtWidgets.QApplication.translate("JosephusCircleFrame", "Return", None, -1))
-
-import static_rc

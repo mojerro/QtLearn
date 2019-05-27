@@ -63,5 +63,3 @@ class Ui_MainWindow(object):
         self.JosephusCircleButton.setText(QtWidgets.QApplication.translate("MainWindow", "Josephus Circle", None, -1))
         self.AStarButton.setText(QtWidgets.QApplication.translate("MainWindow", "A Star Path Finding", None, -1))
         self.actionnew.setText(QtWidgets.QApplication.translate("MainWindow", "new", None, -1))
-
-import static_rc
