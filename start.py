@@ -71,5 +71,8 @@ if __name__ == '__main__':
     app = QApplication(sys.argv)
     window = MainWindow()
     window.setStyleSheet(open(r"UI\base.qss", "r", encoding='utf-8').read())
-    window.show()
-    sys.exit(app.exec_())
+    try:
+        window.show()
+        sys.exit(app.exec_())
+    except:
+        pass

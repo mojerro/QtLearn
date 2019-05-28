@@ -253,7 +253,7 @@ QTableView::item {
 QTableView::item:selected {
         background: rgba(255, 255, 255, 100);
 }
-QTableView::item:selected:!active {
+QTableView::item:selected:active {
         color: rgb(65, 65, 65);
 }
 QTableView::indicator {

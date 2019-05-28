@@ -3,7 +3,7 @@
 # Form implementation generated from reading ui file './UI/a_star.ui',
 # licensing of './UI/a_star.ui' applies.
 #
-# Created: Mon May 27 12:18:36 2019
+# Created: Tue May 28 17:02:06 2019
 #      by: pyside2-uic  running on PySide2 5.12.3
 #
 # WARNING! All changes made in this file will be lost!
@@ -16,6 +16,9 @@ class Ui_AStar(object):
         AStar.setWindowModality(QtCore.Qt.NonModal)
         AStar.setEnabled(True)
         AStar.resize(781, 626)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(":/root/favicon"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        AStar.setWindowIcon(icon)
         self.verticalLayout = QtWidgets.QVBoxLayout(AStar)
         self.verticalLayout.setObjectName("verticalLayout")
         spacerItem = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Minimum)
@@ -106,11 +109,11 @@ class Ui_AStar(object):
         spacerItem5 = QtWidgets.QSpacerItem(40, 20, QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Minimum)
         self.horizontalLayout_3.addItem(spacerItem5)
         self.verticalLayout.addLayout(self.horizontalLayout_3)
-        self.tableWidget = QtWidgets.QTableWidget(AStar)
-        self.tableWidget.setObjectName("tableWidget")
-        self.tableWidget.setColumnCount(0)
-        self.tableWidget.setRowCount(0)
-        self.verticalLayout.addWidget(self.tableWidget)
+        self.tableWidgetResult = QtWidgets.QTableWidget(AStar)
+        self.tableWidgetResult.setObjectName("tableWidgetResult")
+        self.tableWidgetResult.setColumnCount(0)
+        self.tableWidgetResult.setRowCount(0)
+        self.verticalLayout.addWidget(self.tableWidgetResult)
         self.label_row.setBuddy(self.spinBox_row)
         self.label_col.setBuddy(self.spinBox_col)
 
@@ -119,7 +122,7 @@ class Ui_AStar(object):
         AStar.setTabOrder(self.spinBox_row, self.spinBox_col)
         AStar.setTabOrder(self.spinBox_col, self.pushButtonGenerate)
         AStar.setTabOrder(self.pushButtonGenerate, self.pushButtonResult)
-        AStar.setTabOrder(self.pushButtonResult, self.tableWidget)
+        AStar.setTabOrder(self.pushButtonResult, self.tableWidgetResult)
 
     def retranslateUi(self, AStar):
         AStar.setWindowTitle(QtWidgets.QApplication.translate("AStar", "A*迷宫算法", None, -1))
@@ -130,5 +133,4 @@ class Ui_AStar(object):
         self.label_setting.setText(QtWidgets.QApplication.translate("AStar", "添加设置", None, -1))
         self.radioButtonInit.setText(QtWidgets.QApplication.translate("AStar", "牛郎", None, -1))
         self.radioButtonGoal.setText(QtWidgets.QApplication.translate("AStar", "织女", None, -1))
-        self.radioButtonObstacles.setText(QtWidgets.QApplication.translate("AStar", "阻碍", None, -1))
-
+        self.radioButtonObstacles.setText(QtWidgets.QApplication.translate("AStar", "墙", None, -1))

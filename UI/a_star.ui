@@ -19,6 +19,10 @@
   <property name="windowTitle">
    <string>A*迷宫算法</string>
   </property>
+  <property name="windowIcon">
+   <iconset resource="static.qrc">
+    <normaloff>:/root/favicon</normaloff>:/root/favicon</iconset>
+  </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <spacer name="horizontalSpacer_4">
@@ -220,7 +224,7 @@
         </font>
        </property>
        <property name="text">
-        <string>阻碍</string>
+        <string>墙</string>
        </property>
       </widget>
      </item>
@@ -243,7 +247,7 @@
     </layout>
    </item>
    <item>
-    <widget class="QTableWidget" name="tableWidget"/>
+    <widget class="QTableWidget" name="tableWidgetResult"/>
    </item>
   </layout>
  </widget>
@@ -252,8 +256,10 @@
   <tabstop>spinBox_col</tabstop>
   <tabstop>pushButtonGenerate</tabstop>
   <tabstop>pushButtonResult</tabstop>
-  <tabstop>tableWidget</tabstop>
+  <tabstop>tableWidgetResult</tabstop>
  </tabstops>
- <resources/>
+ <resources>
+  <include location="static.qrc"/>
+ </resources>
  <connections/>
 </ui>
