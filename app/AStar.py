@@ -73,7 +73,7 @@ class AStarWindow(QFrame, Ui_AStar):
         self.end = [5, 4]
         self.obstacles = [[1, 3]]  # 2D list like [[1, 2], [3, 4]] to show obstacles
         self.radio = ""
-        self.connect(self.spinBox_col, SIGNAL("valueChanged(val)"), self.set_col)
+        self.connect(self.spinBox_col, SIGNAL("valueChanged(int)"), self.set_col)
         self.connect(self.spinBox_row, SIGNAL("valueChanged(int)"), self.set_row)
         self.connect(self.pushButtonGenerate, SIGNAL("clicked()"), self.generate_table)
         self.connect(self.pushButtonResult, SIGNAL("clicked()"), self.run)
